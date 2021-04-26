@@ -32,13 +32,14 @@
 }
 
 
-.login_form button {
+.login_form .login-button {
     margin-top: 40px;
     margin-left: 40%;
     margin-right: 40%;
     width: 20%;
     margin-bottom: 30px;
 }
+
 
 .pop_ups form {
     width: 50%;
@@ -66,13 +67,13 @@
     justify-content: center;
 }
 
-.quit_form button {
+.quit_form .buton {
     width: 20%;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.quit_content button:nth-child(2) {
+.quit_content .quit {
     margin-left: 30px;
 }
 

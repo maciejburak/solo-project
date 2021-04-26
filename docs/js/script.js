@@ -6,25 +6,31 @@ document.querySelector('.top_menu .hamburger').addEventListener('click', functio
     sidebar.classList.remove('hidden')
     sidebar.classList.add('active');
     document.querySelector('.container').classList.remove('container_edit')
+    document.querySelectorAll('.cart').forEach((e) => {
+        e.classList.remove('edit-m');
+    })
 })
 document.querySelector('.sidebar .hamburger').addEventListener('click', function () {
     sidebar.classList.remove('active');
     sidebar.classList.add('hidden');
-    document.querySelector('.container').classList.add('container_edit');
+    //document.querySelector('.container').classList.add('container_edit');
+    document.querySelectorAll('.cart').forEach((e) => {
+        e.classList.add('edit-m');
+    })
 })
 
 if (sidebar.classList.contains === 'hidden') {
     document.querySelector('.container').classList.add('container_edit');
 }
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     if (document.body.clientWidth < 992) {
         document.querySelector('.sidebar').classList.remove('active');
         document.querySelector('.sidebar').classList.add('hidden');
     } else if (document.body.clientWidth >= 993) {
         document.querySelector('.sidebar').classList.add('active');
         document.querySelector('.sidebar').classList.remove('hidden');
-    }  
+    }
 }, true);
 
 //popups
@@ -78,13 +84,13 @@ const cleaner = function () {
 }
 
 
-document.querySelectorAll('.account_name ').forEach((e) => {  
+document.querySelectorAll('.account_name ').forEach((e) => {
     e.addEventListener('click', function () {
         cleaner();
         document.querySelector('.login_form').classList.remove('hidden')
         document.querySelector('.login_form').classList.add('active')
         closeModal();
-    })   
+    })
 })
 
 
@@ -107,7 +113,7 @@ document.querySelector('.messages').addEventListener('click', function () {
 
 //sidebar
 
-const removeActive = function(){
+const removeActive = function () {
     document.querySelectorAll('.container > *').forEach((e) => {
         e.classList.remove('active')
         e.classList.add('hidden')
@@ -159,8 +165,8 @@ document.querySelector('.payout_sidebar').addEventListener('click', function () 
 var ctx = document.getElementById('myChart').getContext('2d');
 /*eslint-disable */
 //suppress all warnings between comments
-new Chart(ctx, { 
-/*eslint-enable */
+new Chart(ctx, {
+    /*eslint-enable */
     type: 'bar',
     data: {
         labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
