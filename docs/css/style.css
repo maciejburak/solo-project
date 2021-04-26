@@ -160,12 +160,12 @@ button:hover { background: #f1c40f; }
 
 .container .btn-close { position: absolute; background: white; font-size: 30px; padding: 0; right: 0; top: -10%; }
 
+.edit-m { margin-left: 0; }
+
 @media (max-width: 410px) { .date_chooser { -ms-flex-direction: column; flex-direction: column; height: 130px; }
   .date_chooser > * { margin-top: 10px; }
   .date_chooser button { margin-bottom: 10px; }
   .date_chooser span { display: none; } }
-
-.edit-m { margin-left: 0; }
 
 body { background-color: #f5f6fa; }
 
@@ -291,7 +291,7 @@ body { background-color: #f5f6fa; }
 @media (max-width: 420px) { .summary_cell h4 { margin: 5%; }
   .summary_cell p { margin: 5%; } }
 
-.lists_elements button { margin-left: 45%; width: 100px; margin-top: 5%; margin-bottom: 5%; }
+.lists_elements .list-button { margin-left: 45%; width: 100px; margin-top: 5%; margin-bottom: 5%; }
 
 .links_list { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-direction: column; flex-direction: column; margin-top: 7%; }
 
@@ -319,7 +319,7 @@ body { background-color: #f5f6fa; }
 
 .informations * { margin: auto; margin-top: 3%; margin-bottom: 2%; }
 
-.personal_data button { margin-left: 40%; margin-right: 40%; width: 20%; margin-top: 3%; margin-bottom: 3%; }
+.persona_data_button { margin-left: 40%; margin-right: 40%; width: 20%; margin-top: 3%; margin-bottom: 3%; }
 
 .informations_elment { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: space-evenly; justify-content: space-evenly; }
 
