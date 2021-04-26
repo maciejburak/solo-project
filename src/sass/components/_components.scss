@@ -1,0 +1,161 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: black;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.icon {
+    //width: 20px;
+    height: 20px;
+    transition: all 1s;
+}
+
+.pion_line {
+    width: 1px;
+    background-color: $borders-color;
+    height: 35px;
+    padding:0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section_header {
+    border-bottom: 1px solid $borders-color;
+    position: relative;
+}
+
+.section_header h4 {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    padding-left: 10px;
+}
+
+.date_chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px $borders-color solid;
+}
+
+input {
+    height: 35px;
+    border: solid 1px $borders-color;
+}
+
+.date_chooser input:first-child {
+    border-right: none;
+}
+
+.date_chooser :nth-child(3) {
+    border-left: none;
+}
+
+.date_chooser .pion_line {
+    height: 25px;
+}
+
+.date_chooser button {
+    border-radius: 10%;
+    margin-left: 15px;
+}
+
+button {
+    height: 35px;
+    width: 35px;
+    background-color: orangered;
+    transition: all 1s;
+    font-family: $text-font;
+}
+
+.cart {
+    border: solid 1px $borders-color;
+    border-radius: 1%;
+    background-color: white;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 17%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+th {
+    font-family: $text-font
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    margin-right: 1%;
+}
+
+.section_header {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background: #f1c40f;
+}
+
+.lists_elements li:hover,
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+.lists_elements .icon:hover,
+.top_menu .icon:hover {
+    transform: scale(1.5);
+}
+
+.container .btn-close {
+    position: absolute;
+    background: white;
+    font-size: 30px;
+    padding: 0;
+    right: 0;
+    top: -10%;
+}
+
+
+@media(max-width:410px) {
+    .date_chooser {
+        flex-direction: column;
+        height: 130px;
+    }
+
+    .date_chooser>* {
+        margin-top: 10px;
+    }
+
+    .date_chooser button {
+        margin-bottom: 10px;
+    }
+
+    .date_chooser span {
+        display: none;
+    }
+}

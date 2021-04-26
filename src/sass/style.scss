@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "layout";
+
+//components
+@import "components/components";
+//pages
+@import "pages/global";
+@import "pages/general";
+@import "pages/lists";
+@import "pages/personaldata";
+@import "pages/details&payout";
+@import "pages/pop-ups";

@@ -1,0 +1,302 @@
+body {
+    background-color: $body-background-color;
+}
+
+.container {
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    //margin-left: 17%;
+    //margin-right: 17%;
+    margin-top: 50px;
+}
+
+.container_edit {
+    justify-content: center;
+    margin: auto;
+}
+
+//top-menu
+.top_menu_container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $brand-main-color;
+    z-index: 2;
+}
+
+.top_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: solid 1px $borders-color;
+}
+
+.right_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 25px;
+    margin-top: 0;
+}
+
+.right_menu div {
+    margin-top: 5px;
+}
+
+.wallet,
+.account_name {
+    display: flex;
+    flex-direction: row;
+}
+
+.top_menu div {
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 20px;
+}
+
+.right_menu div > * {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.account_name a{
+    transition: all 1s;
+}
+
+.wallet *,
+.account_name *,
+.ring *,
+.quit * {
+    margin-right: 7px;
+    margin-left: 7px;
+    height: 20px;
+}
+
+.top_menu .icon:hover {
+    transform: scale(1.5);
+}
+.account_name a:hover{
+    transform: scale(1.2);
+}
+
+.ring::before {
+    content: '';
+    position: absolute;
+    background: orange;
+    width: 12px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    right: 257px;
+    z-index: 1;
+    display: none;
+}
+
+.top_menu .hamburger {
+    background-color: $paragraph-color;
+    margin-bottom: 5px;
+    margin-top:5px;
+}
+
+.top_menu .hamburger:hover {
+    transform: scale(1.2);
+}
+
+.top_menu i {
+    cursor: pointer;
+}
+
+.sidebar {
+    z-index: 3;
+    top: 0;
+    position: fixed;
+    background-color: #2C3A47;
+    width: 15%;
+    height: 100vh;
+    color: white;
+    overflow-y: auto;
+    transition: all 1s;
+}
+
+.sidebar ul li {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    position: relative;
+    margin: top 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.sidebar ul li::after {
+    content: '';
+    position: absolute;
+    background: $brand-main-color;
+    width: 13px;
+    height: 45px;
+    left: 0;
+    display: none;
+}
+
+.sidebar ul li:hover::after {
+    display: block
+}
+
+.sidebar ul li:hover {
+    background: #3B3B98
+}
+
+.sidebar button:hover {
+    background-color: #2C3A47;
+    transform: scale(1.2);
+}
+
+.page_logo {
+    font-family: $page-logo;
+    margin: 0;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.website_header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.sidebar ul li h5 {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.hamburger {
+    margin-left: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-top: 5px solid white;
+    background: transparent;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid white;
+    transform: translateY(5px);
+}
+
+.hamburger::after {
+    transform: translateY(15px);
+}
+
+.wallet i {
+    position: relative;
+    top: 5px;
+}
+
+.account_name i {
+    position: relative;
+    top: 5px;
+}
+
+.sidebar i {
+    position: relative;
+    top: 15px;
+    width: 20px;
+}
+
+.wallet :nth-child(3) {
+    position: relative;
+    bottom: 5px;
+}
+
+@media (max-width: 992px) {
+    .right_menu {
+        display: none
+    }
+    .cart{
+        margin:auto;
+        width:100%;
+    }
+
+    .mobile-topbar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        padding-left: 15px;
+    }
+
+    .sidebar {
+        height: 100%;
+        width:50%;
+    }
+
+    .mobile-topbar h5,
+    .mobile-topbar a {
+        margin-top: 10px;
+    }
+
+    .wallet {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .ring {
+        margin-bottom: 10px;
+    }
+
+    .wallet :nth-child(3) {
+        display: none;
+    }
+
+    .sidebar .hamburger {
+        position: absolute;
+        right: 5%;
+    }
+
+    .cart{
+        margin-top:10%;
+    }
+
+}
+
+@media (min-width: 992px) {
+    .mobile-topbar {
+        display: none;
+    }
+
+}
+
+
+@media(max-width: 638px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media(min-width: 639px) and (max-width:1226px) {
+    
+
+    .sidebar .hamburger {
+        position: absolute;
+        right: 5%;
+    }
+}
+@media(max-width:390px){
+    .cart{
+        margin-top:14%;
+    }
+}
